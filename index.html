@@ -51,7 +51,7 @@
             <!--Преимущества-->        
         <section class="section feature">
             <div class="container">
-                <h2 class="section-title" hidden>Преимущества</h2>
+                <h2 class="section-title visually-hidden">Преимущества</h2>
                 <ul class="feature-list list">
                     <li class="feature-item">
                         <div class="feature-icon antenna">
@@ -412,8 +412,16 @@
                         ></textarea>                        
                     </div>
                     <div>
-                        <input type="checkbox" name="modal-checkbox" class="modal-checkbox" required id="modal-checkbox">
-                        <label for="modal-checkbox" class="modal-checkbox-text">Соглашаюсь с рассылкой</label>
+                        <input type="checkbox" 
+                        name="modal-checkbox" 
+                        class="modal-checkbox visually-hidden" required 
+                        id="modal-checkbox">
+                        <label for="modal-checkbox" 
+                        class="modal-checkbox-text">
+                        <span><svg class="modal-checkbox-icon" width="16" height="15">
+                            <use href="./images/icons.svg#icon-check"></use>
+                            </svg>
+                        </span>Соглашаюсь с рассылкой и принимаю Условия договора</label>
                     </div>
                     <button type="submit" class="modal-submit">Отправить</button>
                 </form>
