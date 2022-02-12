@@ -14,10 +14,7 @@
   --filters-button-shadows: 0px 3px 1px rgba(0, 0, 0, 0.1),
     0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   --activities-card-shadows: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  --transition-background: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-color: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-border: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-shadows: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 p,
@@ -149,7 +146,7 @@ a {
   letter-spacing: 0.02em;
   color: var(--title-text-color);
 
-  transition: var(--transition-color);
+  transition: color var(--transition);
 }
 
 /*-------------- Contacts --------------*/
@@ -163,7 +160,7 @@ a {
   color: var(--primary-text-color);
   background-color: var(--background-color-body);
 
-  transition: var(--transition-color);
+  transition: color var(--transition);
 }
 .link.current {
   color: var(--akcent-text-color);
@@ -179,7 +176,7 @@ a {
   bottom: 0;
   border-radius: 2px;
 
-  transition: var(--transition-background);
+  transition: background-color var(--transition);
 }
 
 .header-contacts {
@@ -227,7 +224,6 @@ a {
 .hero-title {
   margin-top: 0;
   margin-bottom: 30px;
-
   font-weight: 900;
   font-size: 44px;
   line-height: calc(60 / 44);
@@ -237,7 +233,6 @@ a {
 }
 .button.secondary {
   padding: 10px 32px;
-
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -246,7 +241,7 @@ a {
   color: var(--secondary-text-color);
   background-color: var(--akcent-text-color);
 
-  transition: var(--transition-color), var(--transition-background);
+  transition: color var(--transition), background-color var(--transition);
 }
 
 /*---------------- Button ----------------*/
@@ -402,7 +397,7 @@ a {
   justify-content: center;
   color: var(--socials-icons-color);
 
-  transition: var(--transition-background), var(--transition-color);
+  transition: color var(--transition), background-color var(--transition);
 }
 .team-socials-icon {
   fill: currentColor;
@@ -435,7 +430,7 @@ a {
   border: 1px solid var(--socials-icons-color);
   color: var(--socials-icons-color);
 
-  transition: var(--transition-color), var(--transition-border);
+  transition: color var(--transition), border var(--transition);
 }
 .customers-icon {
   fill: currentColor;
@@ -480,7 +475,7 @@ a {
   color: var(--secondary-text-color);
 }
 .contacts.link {
-  transition: var(--transition-color);
+  transition: color var(--transition);
 }
 .contacts {
   color: rgba(255, 255, 255, 0.6);
@@ -516,7 +511,7 @@ a {
   align-items: center;
   justify-content: center;
 
-  transition: var(--transition-background);
+  transition: background-color var(--transition);
 }
 .footer-socials-icon {
   fill: var(--secondary-text-color);
@@ -576,11 +571,10 @@ a {
   align-items: center;
   cursor: pointer;
 }
-.modal-close-btn:hover,
-.modal-close-btn:focus {
-  /* background-color: var(--akcent-text-color); */
-  transition: var(--transition-background);
+.modal-close-svg {
+  transition: color var(--transition);
 }
+.modal-close-svg:hover,
 .modal-close-svg:hover {
   fill: var(--akcent-text-color);
 }
@@ -692,7 +686,7 @@ a {
   margin-bottom: 30px;
 }
 .modal-submit {
-  display: flex;
+  display: block;
   font-weight: 700;
   font-size: 16px;
   line-height: calc(30 / 16);
@@ -701,9 +695,17 @@ a {
   color: var(--secondary-text-color);
   background: var(--akcent-text-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
   border-radius: 4px;
   margin-right: auto;
   margin-left: auto;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color var(--transition);
+}
+.modal-submit:hover,
+.modal-submit:focus {
+  background-color: #188ce8;
 }
 
 /*---------------- Портфолио ------------------*/
@@ -732,8 +734,8 @@ a {
   background-color: var(--background-color-btn);
   color: var(--title-text-color);
 
-  transition: var(--transition-background), var(--transition-color),
-    var(--transition-shadows);
+  transition: color var(--transition), background-color var(--transition),
+    box-shadow var(--transition);
 }
 .button.primary:hover,
 .button.primary:focus {
@@ -770,7 +772,7 @@ a {
 .activities-item-link {
   display: block;
 
-  transition: var(--transition-shadows);
+  transition: box-shadow var(--transition));
 }
 .activities-wrap {
   position: relative;
