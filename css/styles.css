@@ -625,24 +625,6 @@ a {
   top: 50%;
   transform: translateY(-50%);
 }
-.modal-submit {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: calc(30 / 16);
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-
-  color: var(--secondary-text-color);
-  width: 200px;
-  height: 50px;
-  left: 700px;
-  top: 712px;
-
-  background: var(--akcent-text-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-}
 .modal-label {
   font-size: 12px;
   line-height: calc(14 / 12);
@@ -700,21 +682,28 @@ a {
 .modal-checkbox:checked + .modal-checkbox-text svg {
   fill: var(--secondary-text-color);
 }
-/* .modal-checkbox-text::before {
-  content: "";
-  width: 16px;
-  height: 15px;
-  border: 2px solid var(--title-text-color);
-  border-radius: 2px;
-  margin-right: 7px;
+.modal-checkbox-link {
+  color: var(--akcent-text-color);
+  text-decoration: underline;
 }
-.modal-checkbox:checked + .modal-checkbox-text::before {
-  background-color: var(--akcent-text-color);
-  background-image: url(../images/check.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  border: none;
-} */
+.modal-checkbox-text-content {
+  margin-bottom: 30px;
+}
+.modal-submit {
+  display: flex;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+  padding: 10px 55px;
+  color: var(--secondary-text-color);
+  background: var(--akcent-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 /*---------------- Портфолио ------------------*/
 
