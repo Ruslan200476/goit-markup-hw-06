@@ -685,8 +685,6 @@ a {
 .modal-checkbox-link {
   font-size: 14px;
   line-height: calc(24 / 14);
-  display: flex;
-  align-items: center;
   color: var(--akcent-text-color);
   text-decoration: underline;
 }
