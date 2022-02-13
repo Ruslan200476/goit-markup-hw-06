@@ -327,6 +327,7 @@
                         </ul>             
                     </address>
                 </div>
+                <!-- Приглашение в соцсети -->
                 <div class="footer-socials">
                     <h3 class="footer-socials-title">присоединяйтесь</h3>
                     <ul class="footer-socials-list list">
@@ -349,12 +350,28 @@
                                 <svg class="footer-socials-icon" width="20" height="20">
                                     <use href="./images/icons.svg#icon-linkedin"></use>
                                 </svg></a>
-                        </li>
-                        
+                        </li>                     
                     </ul>
                 </div>
+                <!-- Подписка на рассылку -->
+                <form class="subscribe-form">
+                    <b class="subscribe-title">Подпишитесь на рассылку</b>
+                    <div class="subscribe-input-wrap">
+                        <input type="email" 
+                        name="subscribe-mail" 
+                        class="subscribe-input" required 
+                        id="subscribe-mail"
+                        placeholder="E-mail">
+                        <button type="submit" class="subscribe-submit">Подписаться
+                            <svg class="subscribe-icon" width="24" height="24">
+                                <use href="./images/icons.svg#icon-icon-send"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
             </div>         
         </footer>
+        <!-- Модальное окно -->
         <div class="backdrop is-hidden" data-modal>
             <div class="modal">
                 <button type="button" class="modal-close-btn" data-modal-close>
@@ -421,8 +438,8 @@
                         <span><svg class="modal-checkbox-icon" width="16" height="15">
                             <use href="./images/icons.svg#icon-check"></use>
                             </svg>
-                        </span>Соглашаюсь с рассылкой и принимаю</label>
-                        <a href="" class="modal-checkbox-link">Условия договора</a>
+                        </span>Соглашаюсь с рассылкой и принимаю <a href="" class="modal-checkbox-link">Условия договора</a></label>
+                        
                     </div>
                     <button type="submit" class="modal-submit">Отправить</button>
                 </form>
